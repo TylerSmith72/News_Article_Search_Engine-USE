@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science and Technology !</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <strong>Universal-Sentence-Encoder</strong>
+        <input type="text" id="queryInput" placeholder="Search...">
+        <select id="datasetSelect"></select>
+    </header>
+
+    <main>
+        <article id="content"></article>
+    </main>
+    
+    <script src="app.js"></script>
+    <script>
+        document.getElementById("queryInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                processQuery();
+            }
+        });
+    </script>
+</body>
+</html>
